@@ -3,7 +3,7 @@ import requests
 import os
 
 # Link do Chromium snapshot (działa z undetected-chromedriver)
-CHROME_URL = "https://storage.googleapis.com/chromium-browser-snapshots/Linux_x64/1181205/chrome-linux.zip"
+CHROME_URL = "https://storage.googleapis.com/chrome-for-testing-public/124.0.6367.91/linux64/chrome-linux64.zip"
 
 def download_and_extract(url, extract_to="."):
     filename = "chrome-linux.zip"
