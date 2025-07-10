@@ -1,14 +1,17 @@
-# Ustawienia katalogu roboczego
+# Ustaw bazowy obraz z Pythonem
+FROM python:3.11
+
+# Ustaw katalog roboczy
 WORKDIR /app
 
-# Skopiuj pliki do obrazu
+# Skopiuj pliki projektu
 COPY . .
 
-# Instalacja zależności Pythona
+# Instaluj zależności
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Pobierz Chromium i nadaj uprawnienia
-RUN python download_chrome.py && chmod +x chrome-linux/chrome
+# Nadaj prawa wykonywania przeglądarce
+RUN chmod +x chrome-linux/chrome
 
-# Start
+# Uruchom bota
 CMD ["python", "bot.py"]
