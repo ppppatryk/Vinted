@@ -6,6 +6,7 @@ WORKDIR /app
 
 # Skopiuj pliki projektu
 COPY . .
+RUN chmod +x start.sh
 
 # Instaluj zależności
 RUN pip install --no-cache-dir -r requirements.txt
@@ -14,4 +15,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 RUN chmod +x chrome-linux/chrome
 
 # Uruchom bota
-CMD ["python", "bot.py"]
+CMD ["./start.sh"]
+
