@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "📥 Pobieram Chromium..."
 
-wget -q https://storage.googleapis.com/chromium-browser-snapshots/Linux_x64/1155276/chrome-linux.zip -O chrome-linux.zip
+wget https://storage.googleapis.com/chrome-for-testing-public/124.0.6367.91/linux64/chrome-linux.zip
 unzip -qq chrome-linux.zip
 
 echo "✅ Nadaję prawa do uruchamiania..."
