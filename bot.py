@@ -73,6 +73,9 @@ async def monitor_ads(channel):
             time.sleep(5)
 
 def get_vinted_html():
+    import os
+    os.chmod('./chrome-linux/chrome', 0o755)
+
     options = uc.ChromeOptions()
     options.binary_location = CHROME_BINARY_PATH
     options.add_argument("--headless")
