@@ -11,7 +11,7 @@ CHANNEL_ID = int(os.environ["CHANNEL_ID"])
 
 # Ścieżki do przeglądarki i drivera
 CHROMEDRIVER_PATH = "./chromedriver"
-CHROME_BINARY_PATH = "./chrome-linux/chrome"
+CHROME_BINARY_PATH = "./chrome-linux64/chrome"
 
 # Link do monitorowania
 VINTED_URL = "https://www.vinted.pl/catalog?catalog[]=3661&brand_ids[]=54661&search_id=20504041050&order=newest_first&time=1751358879&catalog_from=0&page=1&price_from=100&currency=PLN&sim_lock_ids[]=1313"
@@ -74,7 +74,7 @@ async def monitor_ads(channel):
 
 def get_vinted_html():
     import os
-    os.chmod('./chrome-linux/chrome', 0o755)
+    os.chmod('./chrome-linux64/chrome', 0o755)
 
     options = uc.ChromeOptions()
     options.binary_location = CHROME_BINARY_PATH
